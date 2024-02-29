@@ -116,6 +116,7 @@ header {
   margin: auto;
   text-align: center;
   padding-top: 10px;
+  transition:transform .5s;
 }
 .aaa {
   padding: 20px 0;
@@ -247,8 +248,15 @@ header {
   inset: 0 -400px 0 auto;
   display: grid;
   grid-template-rows:70px 1fr 70px;
-
+  transition: .5s;
 }
+.showCart .cartTab{
+  inset: 0 0 0 auto;
+}
+.showCart .cartTab .container{
+  transform: translateX(-250px);
+}
+
 .cartTab h1{
   padding: 20px;
   margin: 0;
