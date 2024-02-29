@@ -109,6 +109,9 @@ header {
     display: block;
   }
 }
+
+
+/* Product List */
 .container {
   margin: auto;
   text-align: center;
@@ -205,6 +208,7 @@ header {
   animation: opacityFallbackOut 0.5s step-start forwards;
   backface-visibility: hidden;
   background-color: #ebebeb;
+
   clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
   content: "";
   height: 100%;
@@ -224,11 +228,13 @@ header {
 
 .button-48:after {
   background-color: #ffffff;
+ 
 }
 
 .button-48 span {
   z-index: 1;
   position: relative;
+  
 }
 .cartTab{
   width: 400px;
@@ -238,7 +244,7 @@ header {
   top:0;
   right: 0;
   bottom:0;
-  inset: 0 0 0 auto;
+  inset: 0 -400px 0 auto;
   display: grid;
   grid-template-rows:70px 1fr 70px;
 
@@ -256,5 +262,41 @@ header {
 .cartTab .btn button{
   background-color: #E88C0E;
   border:none;
-  font-family: Poppins;;
+  font-family: Poppins;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cartTab .btn .close{
+  background-color: #eee;
+}
+
+.cartTab .ListCart .item img{
+width: 100%;
+}
+.cartTab .ListCart .item{
+  display: grid;
+  grid-template-columns: 70px 150px 50px 1fr;
+  gap:10px;
+  text-align: center;
+  align-items: center;
+}
+.ListCart .quantity span{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  color: #555;
+  border-radius: 50%;
+  cursor:pointer;
+}
+.ListCart .quantity span:nth-child(2){
+  background-color: transparent;
+  color:#eee;
+
+}
+.ListCart .item:nth-child(even){
+  background-color: #eee1;
+}
+.ListCart{
+  overflow: auto;
 }
